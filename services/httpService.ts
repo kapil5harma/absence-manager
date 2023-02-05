@@ -7,15 +7,15 @@ export const axiosInstance = axios.create({
 });
 
 const API_ENDPOINTS = {
-  members: 'members',
-  absences: 'absences',
+  member: 'member',
+  absence: 'absence',
 };
 
 const getMembers = async () => {
   try {
-    const res = await axiosInstance.get(API_ENDPOINTS.members);
+    const res = await axiosInstance.get(API_ENDPOINTS.member);
     if (res?.status === 200) {
-      return res?.data?.payload;
+      return res?.data;
     }
   } catch (err) {
     // TODO: Log the error to Sentry or logging service.
@@ -25,9 +25,9 @@ const getMembers = async () => {
 
 const getAbsences = async () => {
   try {
-    const res = await axiosInstance.get(API_ENDPOINTS.absences);
+    const res = await axiosInstance.get(API_ENDPOINTS.absence);
     if (res?.status === 200) {
-      return res?.data?.payload;
+      return res?.data;
     }
   } catch (err) {
     // TODO: Log the error to Sentry or logging service.
