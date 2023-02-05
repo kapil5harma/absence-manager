@@ -54,3 +54,4 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - [x] I want to see an empty state if there are no results.
 - [ ] (Bonus) I can generate an iCal file and import it into outlook.
 - [x] (Bonus) Create an API to fetch members and absences.
+- [x] (Bonus) Host the website on the service of your choice (this repo is deployed on Vercel)
