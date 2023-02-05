@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Absence Manager
+
+- a way for company owners to manage sickness and vacations of employees.
+- deployed at: https://absence-manager-kapil5harma.vercel.app
+
+## Tools Used:
+
+- Framework: [Next.js](https://nextjs.org/)
+- UI: [Material UI](https://mui.com/)
+- Testing: Jest, React Testing Library
+- Others: Axios, ESLint, Prettier, TypeScript
 
 ## Getting Started
 
@@ -12,27 +22,33 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+API routes can be accessed on:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- GET: [http://localhost:3000/api/member](http://localhost:3000/api/member). This endpoint can be edited in `pages/api/member.ts`.
+- GET: [http://localhost:3000/api/absence](http://localhost:3000/api/absence). This endpoint can be edited in `pages/api/absence.ts`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Frontend app can be accessed on:
+
+- [http://localhost:3000](http://localhost:3000)
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Product Requirements
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] I want to see a list of absences including the names of the employees.
+- [x] I want to see the first 10 absences, with the ability to paginate.
+- [x] I want to see a total number of absences.
+- [x] For each absence I want to see:
+  - [x] Member name
+  - [x] Type of absence
+  - [x] Period
+  - [x] Member note (when available)
+  - [x] Status (can be 'Requested', 'Confirmed' or 'Rejected')
+  - [x] Admitter note (when available)
+- [x] I want to filter absences by type.
+- [x] I want to filter absences by date.
+- [x] I want to see a loading state until the list is available.
+- [x] I want to see an error state if the list is unavailable.
+- [x] I want to see an empty state if there are no results.
+- [] (Bonus) I can generate an iCal file and import it into outlook.
+- [x] (Bonus) Create an API to fetch members and absences.
