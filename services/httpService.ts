@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BASE_URL = process.env.BASE_URL;
+
 export const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: `${BASE_URL}/api`,
   timeout: 2000,
   headers: { 'X-Custom-Header': 'absence-manager-custom-header' },
 });
