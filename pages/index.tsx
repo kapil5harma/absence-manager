@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '@/styles/Home.module.css';
 import { useEffect, useState } from 'react';
 import httpService from '@/services/httpService';
@@ -24,12 +25,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Absence Manager</title>
+        <title>Crewmeister - Absence Manager</title>
         <meta name="description" content="Absence Manager" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className={styles.nav}>
+        <Image className={styles.image} src="/logo.png" alt="logo" width="192" height={36}></Image>
         <h1>Absence Manager</h1>
       </nav>
       <main className={styles.main}>{!absences?.length ? <CircularProgress /> : <DataGridTable rows={absences}></DataGridTable>}</main>
