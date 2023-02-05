@@ -13,6 +13,9 @@ export default function Home() {
       const res = await httpService.getAbsences();
       setabsences(res);
     };
+
+    // ? setTimeout is not required but added to show loader for a second
+    // ? Attempt to mimic network lag 🎯
     setTimeout(() => {
       getAbsences();
     }, 1000);
