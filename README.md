@@ -1,7 +1,9 @@
 ## Absence Manager
 
 - a way for company owners to manage sickness and vacations of employees.
-- deployed at: https://absence-manager-kapil5harma.vercel.app
+- Frontend App: https://absence-manager-kapil5harma.vercel.app
+- Absence API: https://absence-manager-kapil5harma.vercel.app/api/absence
+- Member API: https://absence-manager-kapil5harma.vercel.app/api/member
 
 ## Tools Used:
 
@@ -50,5 +52,5 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - [x] I want to see a loading state until the list is available.
 - [x] I want to see an error state if the list is unavailable.
 - [x] I want to see an empty state if there are no results.
-- [] (Bonus) I can generate an iCal file and import it into outlook.
+- [ ] (Bonus) I can generate an iCal file and import it into outlook.
 - [x] (Bonus) Create an API to fetch members and absences.
