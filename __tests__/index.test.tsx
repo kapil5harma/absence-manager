@@ -1,9 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Home from './index';
-import httpService from '@/services/httpService';
-
-jest.mock('@/services/httpService');
+import React from 'react';
+import Home from '../pages/index';
 
 describe('Home', () => {
   it('renders a heading', () => {
